@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
+import CharacterList from './components/CharacterList';
+import CharacterDetail from './components/CharacterDetail';
+
 import './App.css';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      Rick and Morty Show
+      <Switch>
+        <Route exact path= "/" component={CharacterList} />
+        <Route path = "/character/:id" component={CharacterDetail} />
+      </Switch>
+
     </div>
   );
 }
