@@ -1,0 +1,9 @@
+.CharacterList-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.CharacterList-container {
+  display: flex;
+  flex-wrap: wrap;
+}
