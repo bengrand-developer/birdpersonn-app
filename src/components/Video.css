@@ -1,0 +1,19 @@
+.Video-container {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  background-color: #36b0cb;
+  width: 100vw;
+  align-items: center;
+}
+
+.Form-video {
+  border-radius: 5px;
+  margin: 10px;
+  height: 40px;
+  width: 640px;
+}
+input::placeholder {
+  color: #8fc748;
+  font-size: 20px;
+}

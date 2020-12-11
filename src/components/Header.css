@@ -1,0 +1,15 @@
+.Header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  vertical-align: middle;
+  align-items: center;
+  background-color: #201e4f;
+  color: #36b0cb;
+  width: 100vw;
+}
+
+.Portal-picture {
+  width: 200px;
+  height: 200px;
+}
