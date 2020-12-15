@@ -13,3 +13,10 @@
   width: 200px;
   height: 200px;
 }
+.Header-container h1 {
+  margin-left: 10px;
+}
+
+.Header-container img {
+  margin-right: 10px;
+}

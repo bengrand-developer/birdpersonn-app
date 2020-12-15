@@ -7,6 +7,7 @@ const Character = ({ character }) => {
     <div className="Character">
       <Link to={`/character/${character.id}`}>{character.name}</Link>
       <img src={character.image} alt="character" />
+      <button className="btn">Add to favorites</button>
     </div>
   );
 };
