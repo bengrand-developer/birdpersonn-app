@@ -1,17 +1,18 @@
-import { get } from "lodash";
-import React, { useEffect, useState } from "react";
+// import React, { useEffect, useState } from "react";
 
-const Favorites = () => {
-  const getFavoritesCharacter = localStorage.getItem("addToFavorites");
-  console.log(getFavoritesCharacter);
+// const Favorites = (character) => {
+//   const
+//   const [favorites, setFavorites] = useState(localStorage.getItem("favorites"));
 
-  const [favorites, setFavorites] = useState(getFavoritesCharacter());
+//   // useEffect(() => {
+//   //   localStorage.setItem("favorites", JSON.stringify(favorites));
+//   // }, [favorites]);
 
-  useEffect(() => {
-    localStorage.setItem("addToFavorites", JSON.stringify(favorites));
-  }, [favorites]);
+//   useEffect(() => {
+//     window.localStorage.setItem("favorites", character);
+//   }, [character]);
 
-  return <div></div>;
-};
+//   return <div></div>;
+// };
 
-export default Favorites;
+// export default Favorites;

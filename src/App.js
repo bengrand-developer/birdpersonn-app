@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Video from "./components/Video";
 import "./App.css";
 import Home from "./components/Home";
+import Favorites from "./components/Favorites";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/character/:id" component={CharacterDetail} />
+        <Route path="/Favorites" component={Favorites} />
       </Switch>
     </div>
   );
