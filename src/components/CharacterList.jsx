@@ -11,6 +11,7 @@ const CharacterList = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(false);
   const [searchCharacter, setSearchCharacter] = useState("");
+  const [fav, setFav] = useState([]);
 
   useEffect(() => {
     setLoading(true);
@@ -39,6 +40,15 @@ const CharacterList = () => {
 
   console.log("search dans characterlist", searchCharacter);
 
+  const addOrRemoveFav = (character) => {
+    if (!fav.some((favCharacter) => favCharacter.id === character.id)) {
+      setFav([...fav, character]);
+    } else {
+      const newFav = fav.filter((fav) => fav.id !== character.id);
+      setFav(newFav);
+    }
+  };
+
   return (
     <div className="CharacterList-wrapper">
       <div className="CharacterList-container">
@@ -47,7 +57,11 @@ const CharacterList = () => {
 
         {!loading &&
           characterList.map((character) => (
-            <Character key={character.id} character={character} />
+            <Character
+              key={character.id}
+              character={character}
+              onClick={() => addOrRemoveFav(character)}
+            />
           ))}
       </div>
       {currentPage !== 34 && (
